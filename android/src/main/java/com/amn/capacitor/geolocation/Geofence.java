@@ -1,8 +1,8 @@
-package com.amn.capacitor.geolocation;
+package com.amn.capacitor.geofence;
 
 import com.getcapacitor.Logger;
 
-public class BackgroundGeolocation {
+public class Geofence {
 
     public String echo(String value) {
         Logger.info("Echo", value);

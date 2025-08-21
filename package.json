@@ -1,7 +1,7 @@
 {
-  "name": "capacitor-background-geolocation",
+  "name": "capacitor-geofence",
   "version": "0.0.1",
-  "description": "Get geolocation background process",
+  "description": "Get geofence background process",
   "main": "dist/plugin.cjs.js",
   "module": "dist/esm/index.js",
   "types": "dist/esm/index.d.ts",
@@ -13,16 +13,16 @@
     "ios/Sources",
     "ios/Tests",
     "Package.swift",
-    "CapacitorBackgroundGeolocation.podspec"
+    "CapacitorGeofence.podspec"
   ],
   "author": "Bayu",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/amnindonesia/background-geolocation.git"
+    "url": "git+https://github.com/amnindonesia/geofence.git"
   },
   "bugs": {
-    "url": "https://github.com/amnindonesia/background-geolocation/issues"
+    "url": "https://github.com/amnindonesia/geofence/issues"
   },
   "keywords": [
     "capacitor",
@@ -31,7 +31,7 @@
   ],
   "scripts": {
     "verify": "npm run verify:ios && npm run verify:android && npm run verify:web",
-    "verify:ios": "xcodebuild -scheme CapacitorBackgroundGeolocation -destination generic/platform=iOS",
+    "verify:ios": "xcodebuild -scheme CapacitorGeofence -destination generic/platform=iOS",
     "verify:android": "cd android && ./gradlew clean build test && cd ..",
     "verify:web": "npm run build",
     "lint": "npm run eslint && npm run prettier -- --check && npm run swiftlint -- lint",
@@ -39,7 +39,7 @@
     "eslint": "eslint . --ext ts",
     "prettier": "prettier \"**/*.{css,html,ts,js,java}\" --plugin=prettier-plugin-java",
     "swiftlint": "node-swiftlint",
-    "docgen": "docgen --api BackgroundGeolocationPlugin --output-readme README.md --output-json dist/docs.json",
+    "docgen": "docgen --api GeofencePlugin --output-readme README.md --output-json dist/docs.json",
     "build": "npm run clean && npm run docgen && tsc && rollup -c rollup.config.mjs",
     "clean": "rimraf ./dist",
     "watch": "tsc --watch",

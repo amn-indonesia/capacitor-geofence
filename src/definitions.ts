@@ -1,3 +1,3 @@
-export interface BackgroundGeolocationPlugin {
+export interface GeofencePlugin {
   echo(options: { value: string }): Promise<{ value: string }>;
 }

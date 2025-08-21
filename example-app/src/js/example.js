@@ -1,6 +1,6 @@
-import { BackgroundGeolocation } from 'capacitor-background-geolocation';
+import { Geofence } from 'capacitor-geofence';
 
 window.testEcho = () => {
     const inputValue = document.getElementById("echoInput").value;
-    BackgroundGeolocation.echo({ value: inputValue })
+    Geofence.echo({ value: inputValue })
 }
