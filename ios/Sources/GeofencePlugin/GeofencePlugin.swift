@@ -17,7 +17,7 @@ public class GeofencePlugin: CAPPlugin, CLLocationManagerDelegate {
         manager.pausesLocationUpdatesAutomatically = true
     }
 
-    @objc func requestPermissions(_ call: CAPPluginCall) {
+    @objc public override func requestPermissions(_ call: CAPPluginCall) {
         manager.requestAlwaysAuthorization()
         call.resolve()
     }
